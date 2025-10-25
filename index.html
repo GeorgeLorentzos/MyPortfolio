@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorentzos Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      font-family: "Roboto", sans-serif;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    body {
+      background: white;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    @font-face {
+      font-family: 'AC Rubic Bold';
+      src: url('fonts/ACRubicBold.woff2') format('woff2');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'AC Rubic Black';
+      src: url('fonts/ACRubicBlack.woff2') format('woff2');
+      font-style: normal;
+    }
+
+    .font-arb {
+      font-family: 'AC Rubic Bold', 'Roboto', sans-serif;
+    }
+
+    .font-arbl {
+      font-family: 'AC Rubic Black', 'Roboto', sans-serif;
+    }
+
+    @font-face {
+      font-family: 'Geologica Light';
+      src: url('fonts/Geologica-Light.woff2') format('woff2');
+      font-style: normal;
+    }
+
+    .font-gol {
+      font-family: 'Geologica Light', 'Roboto', sans-serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .font-roboto {
+      font-family: "Roboto", sans-serif;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    #intro_modal {
+      transition: all 1s ease-in-out;
+      background-color: white;
+    }
+
+    #intro_modal.bg-black {
+      background-color: black;
+    }
+
+    .intro-text-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+    }
+
+    .intro-word {
+      display: inline-block;
+      margin: 0 4px;
+      transition: all 500ms ease-in-out;
+    }
+    
+    .min-h-screen {
+        min-height: 100vh;
+    }
+    
+    @media (max-width: 768px) {
+      #intro_text_0 {
+        font-size: 2rem;
+      }
+
+      #intro_text_1,
+      #intro_text_2,
+      #intro_text_3 {
+        font-size: 1.5rem;
+      }
+
+      #skip_intro_button {
+        width: 80px;
+        height: 32px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="py-6 flex justify-center items-center">
+    <div class="flex flex-col justify-center items-start min-h-screen px-4">
+      <div class="relative w-full max-w-[600px] fade-in" id="about-me" style="display: none;">
+        <div id="text-box" class="font-roboto px-2 text-base leading-7 text-black pb-[10px] transition duration-200">
+          <div class="text-xl font-arb text-green-600">
+            ABOUT ME
+          </div>
+          Hello, I’m <a href="http://instagram.com/lorentzos._" style="color: #2563eb;">Lorentzos</a>. I’ve been into programming since I was 12 years old and I’m a full-stack software engineer. I build websites and web apps with the goal of providing the best possible user experience — focusing on user-friendly design, speed, security, and ease of use. I turn ideas into code. If you’d like to work together, send me a message.
+          <br><br>
+                    <div class="text-xl font-arb text-green-600">
+             TECH SKILLS
+          </div>
+
+ <div class="font-roboto text-black">
+  <strong>Languages:</strong> Python, JavaScript, TypeScript, SQL, Bash <br>
+  <strong>Frontend:</strong> HTML, CSS, Tailwind CSS, Bootstrap, React <br>
+  <strong>Backend:</strong> Flask (Flask-WTF, Flask-Login, Flask-Mail, Flask-Bcrypt, Flask-SQLAlchemy), 
+  Django, Stripe, PayPal, RESTful APIs, Background Tasks (APScheduler, Threads) <br>
+  <strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Redis <br>
+  <strong>Data Science:</strong> Pandas, NumPy, Matplotlib, Seaborn, Plotly <br>
+  <strong>DevOps & Cloud:</strong> Docker, Linode, AWS, Heroku, Vercel <br>
+  <strong>Version Control:</strong> Git <br>
+  <strong>Other Tools:</strong> Dotenv, Requests, JSON, UUID, Scheduling, Web Security (Bcrypt, Sessions)
+</div>
+<br>
+
+
+          <div class="text-xl font-arb text-green-600">
+            LIVE PROJECTS
+          </div>
+          <div class="flex gap-2">
+            <a href="https://elite-media.gr/" style="color: #2563eb;">elite-media.gr</a>
+            <a href="https://salesmasteryx.gr/" style="color: #2563eb;">salesmasteryx.gr</a>
+          </div>
+          <br>
+          <div class="flex gap-2">
+            <a href="mailto:&#108;&#111;&#114;&#101;&#110;&#116;&#122;&#111;&#115;&#46;&#119;&#111;&#114;&#10_@&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="font-arb flex justify-center items-center bg-[#fdd538] inline-block w-[100px] h-[35px] text-black rounded-lg cursor-pointer transition-all duration-1000 font-semibold hover:opacity-80" style="cursor: pointer;">HIRE ME</a>
+            <a href="http://instagram.com/lorentzos._" class="font-arb flex justify-center items-center bg-[#fdd538] inline-block w-[40px] h-[35px] text-black rounded-lg cursor-pointer transition-all duration-1000 font-semibold hover:opacity-80" style="cursor: pointer;"><i class="fa-brands fa-instagram text-xl"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="intro_modal" class="fixed top-0 left-0 z-50 h-screen w-screen flex justify-center items-center">
+    
+    <span class="text-4xl transition-all duration-1000" id="intro_text_0" style="opacity: 1;">Hey</span>
+
+    <div class="text-2xl hidden transition-all duration-1000 text-black" id="intro_text_1">
+      <span id="intro_text_1_0" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">Welcome</span>
+      <span id="intro_text_1_1" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">to</span>
+      <span id="intro_text_1_2" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">my</span>
+      <span id="intro_text_1_3" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">portfolio</span>
+    </div>
+
+    <div class="text-2xl hidden transition-all duration-1000 text-black" id="intro_text_2">
+      <span id="intro_text_2_0" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">I</span>
+      <span id="intro_text_2_1" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">am</span>
+      <span id="intro_text_2_2" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">Lorentzos</span>
+    </div>
+
+    <div class="text-2xl hidden transition-all duration-1000" id="intro_text_3">
+      <span id="intro_text_3_0" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">A</span>
+      <span id="intro_text_3_1" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">Full</span>
+      <span id="intro_text_3_2" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">Stack</span>
+      <span id="intro_text_3_3" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">Software</span>
+      <span id="intro_text_3_4" class="intro-word font-roboto" style="opacity: 0; transform: translateY(32px);">Engineer</span>
+    </div>
+
+    <button class="absolute bottom-5 font-arb right-5 bg-black text-white w-[100px] h-[35px] rounded-lg cursor-pointer transition-all duration-1000 font-semibold hover:opacity-80" id="skip_intro_button">
+      SKIP
+    </button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const intro_modal = document.getElementById('intro_modal');
+      const intro_text_0 = document.getElementById('intro_text_0');
+      const intro_text_1 = document.getElementById('intro_text_1');
+      const intro_text_2 = document.getElementById('intro_text_2');
+      const intro_text_3 = document.getElementById('intro_text_3');
+      const about_me = document.getElementById('about-me');
+
+      const intro_text_1_0 = document.getElementById('intro_text_1_0');
+      const intro_text_1_1 = document.getElementById('intro_text_1_1');
+      const intro_text_1_2 = document.getElementById('intro_text_1_2');
+      const intro_text_1_3 = document.getElementById('intro_text_1_3');
+
+      const intro_text_2_0 = document.getElementById('intro_text_2_0');
+      const intro_text_2_1 = document.getElementById('intro_text_2_1');
+      const intro_text_2_2 = document.getElementById('intro_text_2_2');
+
+      const intro_text_3_0 = document.getElementById('intro_text_3_0');
+      const intro_text_3_1 = document.getElementById('intro_text_3_1');
+      const intro_text_3_2 = document.getElementById('intro_text_3_2');
+      const intro_text_3_3 = document.getElementById('intro_text_3_3');
+      const intro_text_3_4 = document.getElementById('intro_text_3_4');
+
+      const skip_intro_button = document.getElementById('skip_intro_button');
+
+      function hideIntro() {
+        intro_modal.style.opacity = '0';
+        intro_modal.style.pointerEvents = 'none';
+        about_me.style.display = 'block';
+        about_me.style.animation = 'fadeIn 1s ease-in-out forwards';
+        
+        document.body.style.overflowY = 'auto'; 
+      }
+
+      skip_intro_button.addEventListener('click', hideIntro);
+
+      if (intro_text_0) {
+        document.body.style.overflowY = 'hidden'; 
+        
+        intro_text_0.style.fontSize = '1.5rem';
+        intro_text_0.style.opacity = '1';
+
+        setTimeout(() => {
+          intro_modal.style.backgroundColor = 'black';
+          intro_text_0.style.color = 'white';
+          skip_intro_button.style.backgroundColor = 'white';
+          skip_intro_button.style.color = 'black';
+        }, 1000);
+
+        setTimeout(() => {
+          intro_text_0.style.transform = 'translateY(-100px)';
+          intro_text_0.style.opacity = '0';
+        }, 2000);
+
+        setTimeout(() => {
+          intro_text_0.classList.add('hidden');
+          intro_text_1.classList.remove('hidden');
+          intro_text_1.style.color = 'white';
+
+          setTimeout(() => {
+            intro_text_1_0.style.opacity = '1';
+            intro_text_1_0.style.transform = 'translateY(0)';
+          }, 300);
+
+          setTimeout(() => {
+            intro_text_1_1.style.opacity = '1';
+            intro_text_1_1.style.transform = 'translateY(0)';
+          }, 600);
+
+          setTimeout(() => {
+            intro_text_1_2.style.opacity = '1';
+            intro_text_1_2.style.transform = 'translateY(0)';
+          }, 900);
+
+          setTimeout(() => {
+            intro_text_1_3.style.opacity = '1';
+            intro_text_1_3.style.transform = 'translateY(0)';
+          }, 1200);
+        }, 2500);
+
+        setTimeout(() => {
+          intro_text_1.style.transform = 'translateY(-100px)';
+          intro_text_1.style.opacity = '0';
+        }, 4500);
+
+        setTimeout(() => {
+          intro_text_1.classList.add('hidden');
+          intro_text_2.classList.remove('hidden');
+          intro_text_2.style.color = 'white';
+
+          setTimeout(() => {
+            intro_text_2_0.style.opacity = '1';
+            intro_text_2_0.style.transform = 'translateY(0)';
+          }, 300);
+
+          setTimeout(() => {
+            intro_text_2_1.style.opacity = '1';
+            intro_text_2_1.style.transform = 'translateY(0)';
+          }, 600);
+
+          setTimeout(() => {
+            intro_text_2_2.style.opacity = '1';
+            intro_text_2_2.style.transform = 'translateY(0)';
+          }, 900);
+        }, 5500);
+
+        setTimeout(() => {
+          intro_text_2.style.transform = 'translateY(-100px)';
+          intro_text_2.style.opacity = '0';
+        }, 7500);
+
+        setTimeout(() => {
+          intro_text_2.classList.add('hidden');
+          intro_text_3.classList.remove('hidden');
+          intro_modal.style.backgroundColor = 'white';
+          intro_text_3.style.color = 'black';
+          skip_intro_button.style.backgroundColor = 'black';
+          skip_intro_button.style.color = 'white';
+
+          setTimeout(() => {
+            intro_text_3_0.style.opacity = '1';
+            intro_text_3_0.style.transform = 'translateY(0)';
+          }, 300);
+
+          setTimeout(() => {
+            intro_text_3_1.style.opacity = '1';
+            intro_text_3_1.style.transform = 'translateY(0)';
+          }, 600);
+
+          setTimeout(() => {
+            intro_text_3_2.style.opacity = '1';
+            intro_text_3_2.style.transform = 'translateY(0)';
+          }, 900);
+
+          setTimeout(() => {
+            intro_text_3_3.style.opacity = '1';
+            intro_text_3_3.style.transform = 'translateY(0)';
+          }, 1200);
+
+          setTimeout(() => {
+            intro_text_3_4.style.opacity = '1';
+            intro_text_3_4.style.transform = 'translateY(0)';
+          }, 1500);
+        }, 8500);
+
+        setTimeout(() => {
+          hideIntro();
+        }, 12000);
+      }
+    });
+  </script>
+
+</body>
+</html>
