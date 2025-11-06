@@ -1,54 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>George Lorentzos - Resume</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
-</head>
-<body>
-    <div class="px-4 py-4">
-        <h2 class="text-2xl font-bold">About Me</h2>
-        <p>I am George Lorentzos, a dedicated <strong>Full Stack Software Engineer</strong> with over <strong>7 years of programming experience</strong>, having started at the age of 11. Now 17, I possess a strong foundation in both front-end and back-end development.</p>
-    </div>
-    
-    <hr>
-    
-    <div class="px-4 py-4">
-        <h2 class="text-2xl font-bold">Education</h2>
-        <p>Currently 17, I do not yet hold a degree, but I have a substantial portfolio of real-world projects. I am scheduled to begin studies for a <strong>BSc (Hons) Computer Science</strong> from the University of East London (via Metropolitan College) in 3 years.</p>
-    </div>
-    
-    <hr>
-    
-    <div class="px-4 py-4">
-        <h2 class="text-2xl font-bold">Technical Skills</h2>
-        <p>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>George Lorentzos - Resume</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   </head>
+   <body>
+      <div class="px-4 py-4">
+         <h2 class="text-2xl font-bold">About Me</h2>
+         <p>I am George Lorentzos, a dedicated <strong>Full Stack Software Engineer</strong> with over <strong>7 years of programming experience</strong>, having started at the age of 11. Now 17, I possess a strong foundation in both front-end and back-end development.</p>
+      </div>
+      <hr>
+      <div class="px-4 py-4">
+         <h2 class="text-2xl font-bold">Education</h2>
+         <p>Currently 17, I do not yet hold a degree, but I have a substantial portfolio of real-world projects. I am scheduled to begin studies for a <strong>BSc (Hons) Computer Science</strong> from the University of East London (via Metropolitan College) in 3 years.</p>
+      </div>
+      <hr>
+      <div class="px-4 py-4">
+         <h2 class="text-2xl font-bold">Technical Skills</h2>
+         <p>
             <strong>Backend/Frameworks:</strong> Python, Flask, Django, Flask-SQLAlchemy, Flask-Login, Flask-WTF, Flask-Mail, Flask-Bcrypt, Flask-SocketIO, Gunicorn, Uvicorn, APScheduler, Pydantic.<br>
             <strong>Machine Learning / Image Processing:</strong> <strong>PyTorch</strong>, <strong>OpenCV</strong>, <strong>PIL (Pillow)</strong>, <strong>ImageHash</strong>.<br>
             <strong>Databases:</strong> PostgreSQL, MySQL, SQLite.<br>
             <strong>Web/Frontend:</strong> HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, TypeScript.<br>
             <strong>Tools/DevOps:</strong> Docker, Git, Nginx, Ngrok, Cloudflare Tunnel, AWS, Linode, Stripe.<br>
             <strong>Libraries/Modules:</strong> requests, pytest, dotenv, json, datetime, os, pathlib, random, threading, shutil, pandas, Matplotlib, QRcode, Seaborn.
-        </p>
-    </div>
-
-    <hr>
-
-    <div class="px-4 py-4">
-        <h2 class="text-2xl font-bold">Projects</h2>
-        
-        <h1 class="text-xl font-bold text-red-600">Live Freelance Projects (Production SaaS Platform)</h1>
-        <p>A highly scalable and secure Software-as-a-Service (SaaS) platform, developed, deployed, and currently managing operations for two separate social media agencies (identical codebase).</p>
-        
-        <ul>
+         </p>
+      </div>
+      <hr>
+      <div class="px-4 py-4">
+         <h2 class="text-2xl font-bold">Projects</h2>
+         <h1 class="text-xl font-bold text-red-600">Live Freelance Projects (Production SaaS Platform)</h1>
+         <p>A highly scalable and secure Software-as-a-Service (SaaS) platform, developed, deployed, and currently managing operations for two separate social media agencies (identical codebase).</p>
+         <ul>
             <li><strong>Client 1 (Live):</strong> <a class="text-blue-700 font-semibold" href="https://salesmasteryx.gr/">https://salesmasteryx.gr/</a></li>
             <li><strong>Client 2 (Live):</strong> <a class="text-blue-700 font-semibold" href="https://elite-media.gr/">https://elite-media.gr/</a></li>
-        </ul>
-        
-        <h3 class="text-lg font-bold mt-4 mb-2 text-green-700">Enterprise Technical Stack & Highlights:</h3>
-        <ul class="list-disc ml-6 space-y-2">
+         </ul>
+         <h3 class="text-md font-semibold mt-2 text-green-700">Enterprise Technical Stack & Highlights:</h3>
+         <ul class="list-disc ml-6 space-y-1">
             <li><strong>Backend Core:</strong> Built with Python and Flask, leveraging Flask-SQLAlchemy to enforce prepared statements (eliminating SQL Injection) against a MySQL database.</li>
             <li><strong>Security Posture:</strong> Implemented OWASP-inspired Rate Limiting on sensitive routes and enforced strict XSS Protection using mandatory security headers (`X-Frame-Options: DENY`, `CSP`) application-wide.</li>
             <li><strong>Authentication:</strong> Managed user sessions with Flask-Login and secured all credentials using industry-standard Flask-Bcrypt hashing.</li>
@@ -56,91 +46,89 @@
             <li><strong>Infrastructure Readiness:</strong> Designed for high-availability deployment, utilizing werkzeug.middleware.ProxyFix to ensure correct IP and header handling behind production reverse proxies (Nginx, Gunicorn/Uvicorn, Cloudflare Tunnel).</li>
             <li><strong>Maintenance:</strong> Automated system maintenance (e.g., clearing expired security tokens via Flask-Mail links) using APScheduler background jobs.</li>
             <li><strong>Compliance:</strong> Architected to be Fully GDPR Compliant, including secure account deletion flows.</li>
-        </ul>
-
-        <br>
-        <hr>
-        <br>
-
-        <h1 class="text-xl font-bold">Private Projects</h1>
-        
-        <h2 class="text-lg font-bold">Flert (Social Media Application)</h2>
-        <p>A Python/Flask-based social media application built from scratch (similar to Instagram).</p>
-        <ul>
-            <li><strong>Architecture:</strong> Designed a full-stack application supporting user accounts, real-time chat, stories, and friend management.</li>
-            <li><strong>Security & Remediation:</strong> Enforced <strong>DDoS/Brute-Force mitigation</strong>. Utilized ORM for prepared statements to prevent SQL injection. Implemented a <strong>15-minute expiring, single-use link</strong> for password reminders. <strong>Fully GDPR covered</strong>.</li>
-            <li><strong>XSS Protection:</strong> <strong>Disabled iframes</strong> to prevent hackers from stealing user cookies via malicious embedding.</li>
-        </ul>
-        
-        <br>
-
-        <h2 class="text-lg font-bold">SmartCut (Video Captioning & Automation Tool)</h2>
-        <p>A specialized utility created for a Greek social media agency to automate video content creation.</p>
-        <ul>
-            <li><strong>Core Functionality:</strong> Automates the process of adding captions to videos, significantly reducing manual editing time for the agency.</li>
-            <li><strong>Tech Stack:</strong> Developed in <strong>Python</strong> using the <strong>MoviePy</strong> library for video manipulation and <strong>Whisper</strong> (or similar ML model) for high-accuracy speech-to-text conversion.</li>
-        </ul>
-        
-        <br>
-
-        <h2 class="text-lg font-bold">TaxiSou (Real-Time Ride-Hailing Platform)</h2>
-        <p>A location-based service, similar to Uber, facilitating connection between riders and the nearest available drivers.</p>
-        <ul>
-            <li><strong>System Design:</strong> Built on <strong>Flask</strong>. Utilized Flask-SocketIO (WebSockets) for real-time bi-directional communication, enabling riders to see the taxi move live on the map.</li>
-            <li><strong>Driver Integration:</strong> Uses a custom API to receive real-time geolocation updates from a separate driver mobile application.</li>
-            <li><strong>UX Focus:</strong> Optimized the client experience by allowing immediate taxi calling without requiring mandatory user registration or login.</li>
-        </ul>
-        
-        <br>
-
-        <h2 class="text-lg font-bold">MacDuck (E-commerce Marketplace)</h2>
-        <p>A full-featured B2C/C2C marketplace built with an emphasis on security and robust e-commerce features.</p>
-        <ul>
-            <li><strong>Features:</strong> Implemented complete checkout flow, order history, inventory management for stores, and cart management.</li>
-            <li><strong>Security/Auth:</strong> Standardized security practices including <strong>hashed passwords</strong> in MySQL, login attempt throttling, and utilized ORM for prepared statements to prevent SQL injection. <strong>Fully GDPR covered</strong>.</li>
-            <li><strong>XSS Protection:</strong> <strong>Disabled iframes</strong> to prevent hackers from stealing user cookies via malicious embedding.</li>
-        </ul>
-        
-        <br>
-
-        <h2 class="text-lg font-bold">LCHAT (Real-Time Communication Platform)</h2>
-        <p>A chat application built with scalability and maintainability in mind.</p>
-        <ul>
+         </ul>
+         <br>
+         <hr>
+         <br>
+         <h1 class="text-xl font-bold">Private Projects</h1>
+         <h2 class="text-lg font-bold">Flert (Social Media Application)</h2>
+         <p>A high-availability, full-stack social media application built from scratch (similar to Instagram).</p>
+         <h3 class="text-md font-semibold mt-2 text-blue-700">Core Technical Stack & Features:</h3>
+         <ul class="list-disc ml-6 space-y-1">
+            <li><strong>Core Architecture:</strong> Python/Flask backend leveraging Flask-Login for robust session management and Flask-SQLAlchemy (ORM) for efficient data modeling (User, Post, Friend).</li>
+            <li><strong>Secure File Handling:</strong> Implemented safe storage for user-uploaded content (profile images, posts) using werkzeug.utils.secure_filename and enforced a strict 16MB file size limit (`MAX_CONTENT_LENGTH`).</li>
+            <li><strong>Real-Time Capabilities:</strong> Designed a full-stack application supporting user accounts, real-time chat, stories, and friend management (utilizing technologies like Flask-SocketIO from the general skills list for real-time features).</li>
+            <li><strong>Security & Remediation:</strong> Enforced DDoS/Brute-Force mitigation (Rate Limiting). Utilized ORM for prepared statements to prevent SQL injection. Secured credentials using Flask-Bcrypt hashing.</li>
+            <li><strong>Compliance & UX:</strong> Features include a 15-minute expiring, single-use link for secure password reminders (Flask-Mail) and complete GDPR coverage. Implemented HTTP headers to Disable iframes for XSS protection.</li>
+         </ul>
+         <br>
+         <h2 class="text-lg font-bold">SmartCut (Video Captioning & Automation Tool)</h2>
+         <p>A specialized utility created for a Greek social media agency to automate video content creation.</p>
+         <h3 class="text-md font-semibold mt-2 text-blue-700">Core Technical Stack & Features:</h3>
+         <ul class="list-disc ml-6 space-y-1">
+            <li><strong>Core Engine:</strong> Developed in Python using MoviePy for video manipulation and composition. Integrated with external FFMPEG/FFPLAY binaries for video processing.</li>
+            <li><strong>Machine Learning:</strong> Leveraged the Whisper ML model for high-accuracy, word-level speech-to-text transcription, enabling precise subtitle synchronization.</li>
+            <li><strong>Advanced Subtitling Logic:</strong> Implemented custom logic to dynamically chunk transcripts (1-3 words) and apply a readability optimization algorithm that reduces word count when the character count is too high (Social Media Best Practice).</li>
+            <li><strong>Custom Styling:</strong> Utilized MoviePy's TextClip to apply dynamic styling, including custom fonts, colors, and shadow strokes, and used unicodedata for text normalization (handling accents/tones).</li>
+            <li><strong>Core Functionality:</strong> Automates the full pipeline: audio extraction, transcription, subtitle generation, and final video composition, significantly reducing manual editing time for the agency.</li>
+         </ul>
+         <br>
+         <h2 class="text-lg font-bold">TaxiSou (Real-Time Ride-Hailing Platform)</h2>
+         <p>A location-based service, similar to Uber, facilitating connection between riders and the nearest available drivers.</p>
+         <h3 class="text-md font-semibold mt-2 text-blue-700">Core Technical Stack & Features:</h3>
+         <ul class="list-disc ml-6 space-y-1">
+            <li><strong>Real-Time Core:</strong> Built on Python/Flask utilizing Flask-SocketIO (configured for threading) for low-latency, bi-directional WebSockets communication, enabling riders to see the taxi move live on the map.</li>
+            <li><strong>Dedicated Driver API:</strong> Implemented a secured REST API endpoint (`/update_gps`) which requires driver authentication (username/hashed password via Werkzeug Security) to receive and process real-time geolocation updates from a separate driver mobile application.</li>
+            <li><strong>High Availability & Maintenance:</strong> Utilized native Python threading for critical background processes, including a 30-second cleanup job to automatically remove stale GPS data for offline drivers, ensuring map accuracy and responsiveness.</li>
+            <li><strong>Authentication & Security:</strong> Secure driver login handled by Flask-Login and Flask-SQLAlchemy. Registration requires a strict Unique Key validation to control fleet access.</li>
+            <li><strong>Business Logic Integration:</strong> GPS data processing is conditional, performing a real-time check against the PaymentStatus model to ensure only drivers with active subscriptions can share their location (Feature Flagging).</li>
+         </ul>
+         <br>
+         <h2 class="text-lg font-bold">MacDuck (E-commerce Eshop)</h2>
+         <p>A full-featured B2C eshop built with an emphasis on security and robust e-commerce features.</p>
+         <h3 class="text-md font-semibold mt-2 text-blue-700">Core Technical Stack & Features:</h3>
+         <ul class="list-disc ml-6 space-y-1">
+            <li><strong>Backend Core:</strong> Built on Python/Flask using Flask-SQLAlchemy (ORM) against an SQLite database for secure data modeling (Products, Orders, Inventory, Cart).</li>
+            <li><strong>Secure Payments:</strong> Full integration with the Stripe API and implementation of webhook handlers to securely manage and confirm payment completion (`checkout.session.completed`) and handle expiration/failure states (`checkout.session.expired`).</li>
+            <li><strong>E-commerce Logic:</strong> Designed a robust checkout process involving state management (updating Order status to 'Paid'), clearing the user's Cart, and sending transactional emails (Flask-Mail) upon successful payment.</li>
+            <li><strong>Data and File Security:</strong> Enforces security best practices including Flask-Bcrypt for password hashing and ORM to ensure prepared statements against SQL injection. Utilizes `secure_filename` to safely handle file uploads for product images.</li>
+            <li><strong>Compliance & UX:</strong> Implemented logic to clear pending orders upon session expiration and supports the general security practices (like disabling iframes) for XSS protection and overall GDPR coverage.</li>
+         </ul>
+         <br>
+         <h2 class="text-lg font-bold">LCHAT (Real-Time Communication Platform)</h2>
+         <p>A chat application built with scalability and maintainability in mind.</p>
+         <ul>
             <li><strong>Key Tech:</strong> Utilized <strong>Flask</strong> and <strong>Flask-SocketIO</strong> to handle persistent, real-time communication channels. <strong>Fully GDPR covered</strong>.</li>
             <li><strong>Authentication:</strong> User accounts secured with <strong>hashed passwords</strong> and database access utilizes prepared statements to prevent SQL injection.</li>
             <li><strong>Maintenance:</strong> Integrated <strong>APScheduler</strong> for task automation, specifically scheduling background jobs like clearing old password reminder tokens every 15 minutes.</li>
-        </ul>
-        
-        <br>
-
-        <h2 class="text-lg font-bold">LCloud (Scalable Cloud Storage Solution)</h2>
-        <p>A personal cloud storage system demonstrating scalable architecture and user subscription management.</p>
-        <ul>
+         </ul>
+         <br>
+         <h2 class="text-lg font-bold">LCloud (Scalable Cloud Storage Solution)</h2>
+         <p>A personal cloud storage system demonstrating scalable architecture and user subscription management.</p>
+         <ul>
             <li><strong>Architecture:</strong> Designed for easy migration to enterprise cloud solutions (e.g., <strong>AWS S3 or Linode Object Storage</strong>).</li>
             <li><strong>Business Logic:</strong> Implemented tiered storage management (freemium/premium) with a user account center for payment and subscription cancellation. <strong>Fully GDPR covered</strong>.</li>
             <li><strong>Authentication:</strong> Utilizes <strong>hashed passwords</strong>, includes login attempt limitations, and database access utilizes prepared statements to prevent SQL injection.</li>
-        </ul>
-        
-        <br>
-
-        <h2 class="text-lg font-bold">FadeTime (Barber Appointment System)</h2>
-        <p>A business automation tool designed to streamline appointment booking for service providers.</p>
-        <ul>
-            <li><strong>UX/Efficiency:</strong> Functions as a visual scheduling tool, providing automatic reminders and a clear, color-coded display to mark the current client, enhancing workflow management.</li>
-            <li><strong>Core Task:</strong> Manages complex time-slot allocation and scheduling logic.</li>
-        </ul>
-        
-        <br>
-
-        <h2 class="text-lg font-bold">eTickets (QR Code Ticketing System)</h2>
-        <p>An online ticketing system developed for a school event to ensure secure and efficient entry management.</p>
-        <ul>
+         </ul>
+         <br>
+         <h2 class="text-lg font-bold">FadeTime (Barber Appointment System)</h2>
+         <p>A business automation tool designed to streamline appointment booking for service providers.</p>
+         <h3 class="text-md font-semibold mt-2 text-blue-700">Core Technical Stack & Features:</h3>
+         <ul class="list-disc ml-6 space-y-1">
+            <li><strong>Front-end Core:</strong> Developed using pure HTML, Tailwind CSS (for rapid, modern styling), and Vanilla JavaScript (no heavy frameworks) to achieve a fast, responsive user interface.</li>
+            <li><strong>Client-Side Persistence:</strong> Utilized Local Storage for persistent, secure storage of all appointment data on the client device.</li>
+            <li><strong>Complex Logic:</strong> Implemented a proprietary time-status algorithm in JavaScript that dynamically compares the appointment time to the current system time, enabling a clear, color-coded display to mark the 'current' client (within a +/- 30 minute window).</li>
+            <li><strong>Real-Time UX:</strong> Used JavaScript's setInterval function to automatically refresh and re-render appointment statuses every 60 seconds, ensuring the display is always accurate without requiring a page reload.</li>
+            <li><strong>Efficiency:</strong> Appointments are programmatically sorted by time upon saving and loading to maintain a logical workflow order.</li>
+         </ul>
+         <br>
+         <h2 class="text-lg font-bold">eTickets (QR Code Ticketing System)</h2>
+         <p>An online ticketing system developed for a school event to ensure secure and efficient entry management.</p>
+         <ul>
             <li><strong>Security:</strong> Generates a unique, scannable <strong>QR code</strong> ticket upon payment, preventing duplication and unauthorized entry.</li>
             <li><strong>Process:</strong> Seamlessly integrates payment confirmation with ticket generation and mobile delivery to enhance the user experience.</li>
             <li><strong>Tech Stack:</strong> Utilized a <strong>QRcode</strong> generation library in Python for ticket creation.</li>
-        </ul>
-    
-    </div>
-
-</body>
+         </ul>
+      </div>
+   </body>
 </html>
