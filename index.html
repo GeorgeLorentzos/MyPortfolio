@@ -5,28 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>George Lorentzos</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      @font-face {
+         font-family: "Iowan Old Style Regular";
+         src: url("../fonts/iowan-old-style_regular.woff2") format("woff2");
+         font-weight: normal;
+         font-style: normal;
+      }
+
+      @font-face {
+         font-family: "Iowan Old Style Bold";
+         src: url("../fonts/iowan-old-style_bold.woff2") format("woff2");
+         font-weight: normal;
+         font-style: normal;
+      }
+
+      @font-face {
+         font-family: "Iowan Old Style em";
+         src: url("../fonts/iowan-old-style_em.woff2") format("woff2");
+         font-weight: normal;
+         font-style: normal;
+      }
+
+      body{
+         font-family: "Iowan Old Style Regular";
+         overflow-x: hidden;
+      }
+
+      h2{
+         font-family: "Iowan Old Style Bold";
+      }
+
+      h3,em {
+         font-family: "Iowan Old Style em";
+      }
+
+      strong {
+         font-family: "Iowan Old Style Bold";
+      }
+
+      hr {
+         color: rgb(207, 207, 207);
+         width: 660px;
+      }
+
+      ::-webkit-scrollbar {
+         width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+         background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background: #888;
+         border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+         background: #555;
+      }
+
+      * {
+         scrollbar-width: thin;
+         scrollbar-color: #888 #f1f1f1;
+      }
+    </style>
 </head>
-<body>
-<div class="px-4 py-4"><br>
-   <div class="text-2xl font-bold">About Me</div>
+<body class="flex flex-col justify-center items-center">
+<div class="px-4 py-4 max-w-[660px]"><br>
+   <h2 class="text-2xl font-bold">About Me</h2><br>
    <div>
-      I am George Lorentzos, not just a Full-Stack Software Engineer but a Product Builder with 7 years of programming experience, having started at the age of 10. Now 17, I possess a strong foundation in both front-end and back-end development.
+      I am George Lorentzos, a <em>Full-Stack Software Engineer</em> with 7 years of programming experience, having started at the age of 10. Now 17, I possess a strong foundation in both front-end and back-end development.
    </div><br>
 </div>
 <hr>
-<div class="px-4 py-4"><br>
-   <div class="text-2xl font-bold">Education</div>
+<div class="px-4 py-4 max-w-[660px]"><br>
+   <h2 class="text-2xl font-bold">Education</h2><br>
    <div>
-      In a year, I will begin my BSc (Hons) in Computer Science at Metropolitan College, and I will complete the degree in three years, as it is a three-year program.
+      In a year, I will begin my <em>BSc (Hons) in Computer Science</em> at Metropolitan College, and I will complete the degree in three years, as it is a three-year program.
    </div><br>
 </div>
 <hr>
-<div class="px-4 py-4"><br>
-<div class="text-2xl font-bold">Tech Skills</div>
+<div class="px-4 py-4 max-w-[660px] w-full"><br>
+<h2 class="text-2xl font-bold">Tech Skills</h2>
    <br>
-   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto max-w-7xl flex justify-center md:w-max">
+   <div class="grid gap-6 mx-auto grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
       <div>
-         <div class="text-1xl font-bold">Programming & Frameworks</div>
+         <h3 class="text-1xl font-bold">Backend</h3>
          <ul class="list-disc ml-5">
             <li>Python</li>
             <li>Flask (All Ecosystem)</li>
@@ -34,7 +100,7 @@
          </ul>
       </div>
       <div>
-         <div class="text-1xl font-bold">Machine Learning / Data Science</div>
+         <h3 class="text-1xl font-bold">Ml / Ds</h3>
          <ul class="list-disc ml-5">
             <li>PyTorch</li>
             <li>Pandas</li>
@@ -45,7 +111,7 @@
          </ul>
       </div>
       <div>
-         <div class="text-1xl font-bold">Databases</div>
+         <h3 class="text-1xl font-bold">Databases</h3>
          <ul class="list-disc ml-5">
             <li>PostgreSQL</li>
             <li>MySQL</li>
@@ -54,7 +120,7 @@
          </ul>
       </div>
       <div>
-         <div class="text-1xl font-bold">Frontend</div>
+         <h3 class="text-1xl font-bold">Frontend</h3>
          <ul class="list-disc ml-5">
             <li>HTML</li>
             <li>CSS</li>
@@ -65,7 +131,7 @@
          </ul>
       </div>
       <div>
-         <div class="text-1xl font-bold">DevOps & Tools</div>
+         <h3 class="text-1xl font-bold">DevOps & Tools</h3>
          <ul class="list-disc ml-5">
             <li>Docker</li>
             <li>Git</li>
@@ -77,7 +143,7 @@
          </ul>
       </div>
       <div>
-         <div class="text-1xl font-bold">Soft Skills</div>
+         <h3 class="text-1xl font-bold">Soft Skills</h3>
          <ul class="list-disc ml-5">
             <li>Problem Solving</li>
             <li>Creativity</li>
@@ -92,42 +158,42 @@
 </div>
 <hr>
 
-<div class="px-4 py-4"><br>
-   <div class="text-2xl font-bold">Projects</div><br>
-   <div class="text-1xl font-bold">Elite Media - <a href="https://elite-media.gr/" class="text-blue-500">visit</a></div>
+<div class="px-4 py-4 max-w-[660px]"><br>
+   <h2 class="text-2xl font-bold">Projects</h2><br>
+   <strong class="text-1xl font-bold">Elite Media - <a href="https://elite-media.gr/" class="text-blue-500">https://elite-media.gr</a></strong>
    <div>I built a complete online academy for Elite Media with course purchasing, progress tracking, an affiliate program, secure authentication, and an admin dashboard. This platform increased conversions by 50% and generated over $35,000 in sales.</div>
    <br>
-   <div class="text-1xl font-bold">Flert - <span class="text-red-500">private</span></div>
+   <strong class="text-1xl font-bold">Flert</strong>
    <div>I developed Flert, a social media platform that combines real-time messaging, user profiles, content posting, notifications, and a personalized feed. Beyond chat functionality, I implemented advanced features like dynamic feeds, scalable data relationships with ScyllaDB, and interactive user experiences, strengthening my expertise in full-stack development, backend architecture, and building high-performance, user-focused applications.</div>
    <br>
-   <div class="text-1xl font-bold">Captions - <span class="text-red-500">private</span></div>
+   <strong class="text-1xl font-bold">Captions</strong>
    <div>I developed Captions, a private app for a social media agency that automatically adds AI-powered captions to videos. This solution reduced company expenses and boosted video engagement by 35% thanks to modern, attention-grabbing captions.</div>
    <br>
-   <div class="text-1xl font-bold">Taxi Now – <span class="text-red-500">private</span></div>
+   <strong class="text-1xl font-bold">Taxi Now</strong>
    <div>I developed Taxi Now, a taxi app that lets users instantly request the nearest ride without authentication or a driver app. The app requires zero tech from drivers, keeping them safe and focused on driving, while remaining simple and easy to use for all ages.</div>
    <br>
-   <div class="text-1xl font-bold">Relay – <span class="text-red-500">private</span></div>
+   <strong class="text-1xl font-bold">Relay</strong>
    <div>I developed Relay, a secure chat application featuring end-to-end message encryption, real-time messaging, and robust data management using ScyllaDB. This project strengthened my skills in database relationships, scalable backend architecture, and building privacy-focused, high-performance applications.</div>
    <br>
-   <div class="text-1xl font-bold">Macduck – <span class="text-red-500">private</span></div>
+   <strong class="text-1xl font-bold">Macduck</strong>
    <div>I built Macduck to master modern e-commerce features like order history, payments, and refunds. Through this project, I strengthened my full-stack skills, learned to build secure and scalable platforms, and gained hands-on experience delivering real-world solutions.</div>
    <br>
-   <div class="text-1xl font-bold">LCloud – <span class="text-red-500">private</span></div>
+   <strong class="text-1xl font-bold">LCloud</strong>
    <div>I built LCloud to learn how cloud storage systems work. Through this project, I gained hands-on experience setting up servers on Linode and AWS, managing user files in storage, and implementing subscription plans with quotas and billing. This project strengthened my skills in cloud architecture, server management, and building scalable, user-focused applications.</div>
    <br>
-   <div class="text-1xl font-bold">Lor – <span class="text-red-500">private</span></div>
+   <strong class="text-1xl font-bold">Lor AI</strong>
    <div>I developed Lor, an AI clone of myself that replicates my personality and conversational style.</div>
    <br>
-   <div class="text-1xl font-bold">HighwayEye – <span class="text-red-500">private</span></div>
+   <strong class="text-1xl font-bold">HighwayEye</strong>
    <div>HighwayEye is a system I developed that monitors roads in real-time, capturing images of vehicles, identifying license plates, detecting car colors, and logging timestamps for traffic analysis and monitoring.</div>
 </div>
 <br>
 <hr>
-<div class="px-4 py-4"><br>
-   <div class="text-2xl font-bold">Contact</div>
-    <div>
-       <strong>Email:</strong> <a href="mailto:lorentzos.work@gmail.com" class="text-blue-500">lorentzos.work@gmail.com</a>
-    </div><br>
+<div class="px-4 py-4 max-w-[660px] w-full"><br>
+   <h2 class="text-2xl font-bold">Contact Me</h2><br>
+   <div>
+     <a href="mailto:lorentzos.work@gmail.com" class="text-blue-500">lorentzos.work@gmail.com</a>
+   </div><br>
 </div>
 </body>
 </html>
