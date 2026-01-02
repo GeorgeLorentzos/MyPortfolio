@@ -18,17 +18,18 @@
         <button 
             id="selectButton"
             onclick="selectRandomPeople()" 
-            class="w-full bg-black text-white font-medium py-4 px-6 rounded-3xl transition-colors text-lg">
+            class="w-full bg-black text-white font-medium py-4 px-6 rounded-3xl hover:bg-gray-800 transition-colors text-lg mb-3">
             Επιλογή
         </button>
+        
+        <div id="statusText" class="text-sm text-gray-500"></div>
     </div>
-
     <script>
         const people = [
             "Γιώργος Λορέντζος",
             "Ρία Ρήγα",
             "Ανέστης Ντερβίσια",
-            "Μπλιώνης",
+            "Ανέστης Μπλιώνης",
             "Ρούμπη",
             "Ραφαέλα",
             "Λαλάκη",
@@ -61,9 +62,41 @@
             "Λέο"
         ];
 
+        function getUsedNames() {
+            const stored = localStorage.getItem('usedNames');
+            return stored ? JSON.parse(stored) : [];
+        }
+
+        function saveUsedNames(usedNames) {
+            localStorage.setItem('usedNames', JSON.stringify(usedNames));
+        }
+
+        function updateStatus() {
+            const usedNames = getUsedNames();
+            const remaining = people.length - usedNames.length;
+            const statusText = document.getElementById('statusText');
+            statusText.textContent = `Απομένουν ${remaining} από ${people.length} άτομα`;
+        }
+
         function selectRandomPeople() {
-            const shuffled = [...people].sort(() => Math.random() - 0.5);
+            let usedNames = getUsedNames();
+            
+            if (usedNames.length >= people.length) {
+                usedNames = [];
+                saveUsedNames(usedNames);
+            }
+            
+            const availableNames = people.filter(name => !usedNames.includes(name));
+            
+            if (availableNames.length < 2) {
+                return;
+            }
+            
+            const shuffled = [...availableNames].sort(() => Math.random() - 0.5);
             const selected = shuffled.slice(0, 2);
+            
+            usedNames.push(...selected);
+            saveUsedNames(usedNames);
             
             const cards = document.querySelectorAll('.w-full.bg-white');
             cards[0].textContent = selected[0];
@@ -76,7 +109,11 @@
             
             const button = document.getElementById('selectButton');
             button.textContent = 'Επιλογή ξανά';
+            
+            updateStatus();
         }
+
+        updateStatus();
     </script>
 </body>
 </html>
